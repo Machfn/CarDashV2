@@ -5,21 +5,55 @@
     <title>Dash</title>
 </head>
 <body>
-    <div id="rpm"><span id="innerRpm"></span></div>
+    <div id="hud">
+        <div id="spd">
+            <h1 id="live-spd">90</h1>
+            <h2>km/h</h2>
+        </div>
+        <div id="assc"></div>
+        <div id="rpm-circ">
+            <div id="rpm">
+                <h1 id="live-rpm">2500</h1>
+                <h2>RPM</h2>
+            </div>
+            <style>
+                #rpm {
+                    border-radius: ;
+                }
+            </style>
+        </div>
+    </div>
     <button onclick="loads()" id="loads">Load Serv Data</button>
     <style>
+        html {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
         }
-        #rpm {
-            width: 80%;
-            height: 50px;
-            border: 2px solid grey;
-            margin: 20px;
-            
+        #assc {
+            width: 40%;
+            border: 2px solid greenyellow;
+            height: 80%;
+        }
+        #live-spd, #live-rpm {
+            margin-bottom: 0;
+        }
+        #rpm, #spd {
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+            align-items: center;
+        }
+        #hud {
+            width: 90%;
+            height: 200px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
         }
     </style>
     <script type="text/javascript" src="/eel.js"></script>
