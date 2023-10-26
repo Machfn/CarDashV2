@@ -5,18 +5,68 @@
     <title>Dash</title>
 </head>
 <body>
+    <div id="bar">
+        <span id="filler"></span>
+    </div>
+    <style>
+        #bar {
+            width: 100%;
+            height: 40px;
+            background-color: rgba(150, 150, 150, 0.5);
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+        }
+        #filler {
+            width: 70%;
+            border-radius: 10px;
+            background-color: rgba(99, 6, 99, 0.671);
+        }
+    </style>
     <div id="hud">
         <div id="spd">
             <h1 id="live-spd">90</h1>
             <h2>km/h</h2>
         </div>
-        <div id="assc"></div>
+        <div id="assc">
+
+        </div>
         <div id="rpm">
             <h1 id="live-rpm">2500</h1>
             <h2>RPM</h2>
         </div>
     </div>
-    <button onclick="loads()" id="loads">Load Serv Data</button>
+    <!-- <button onclick="loads()" id="loads">Load Serv Data</button> -->
+    <div id="feature-bar">
+        <button><img src="/assets/scan.svg" alt="Scan"></button>
+        <button><img src="/assets/bt.svg" alt="BT"></button>
+        <button><img src="/assets/music.svg" alt="Music"></button>
+        <button><img src="/assets/fm.svg" alt="FM"></button>
+        <button></button>
+        <button></button>
+        <button><img src="/assets/set.svg" alt="Settings"></button>
+    </div>
+    <style>
+        #feature-bar {
+            width: 90%;
+            height: 35px;
+            background-color: rgba(150, 150, 150, 0.5);
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #feature-bar button {
+            width: 60px;
+            background-color: rgba(99, 6, 99, 0.671);
+            border: none;
+            color: white;
+            padding: 5px;
+        }
+        #feature-bar button img {
+            width: 90%;
+            height: 90%;
+        }
+    </style>
     <style>
         html {
             background-color: darkslategrey;
