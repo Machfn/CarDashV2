@@ -5,6 +5,23 @@
     <title>Dash</title>
 </head>
 <body>
+    <div style="display: none;" id="warning">
+        <h1>Warning</h1>
+        <h3>Check DTC codes...</h3>
+        <style>
+            #warning {
+                border: 2px solid white;
+                position: absolute;
+                width: 80%;
+                height: 40%;
+                border-radius: 10px;
+                background-color: rgba(220, 0, 0, 0.6);
+                /* display: flex; */
+                align-items: center;
+                flex-direction: column;
+            }
+        </style>
+    </div>
     <div id="bar">
         <span id="filler"></span>
     </div>
@@ -38,13 +55,13 @@
     </div>
     <!-- <button onclick="loads()" id="loads">Load Serv Data</button> -->
     <div id="feature-bar">
-        <button><img src="/assets/scan.svg" alt="Scan"></button>
-        <button><img src="/assets/bt.svg" alt="BT"></button>
-        <button><img src="/assets/music.svg" alt="Music"></button>
-        <button><img src="/assets/fm.svg" alt="FM"></button>
-        <button></button>
-        <button></button>
-        <button><img src="/assets/set.svg" alt="Settings"></button>
+        <a><img src="/assets/scan.svg" alt="Scan"></a>
+        <a></a>
+        <a><img src="/assets/music.svg" alt="Music"></a>
+        <a><img src="/assets/fm.svg" alt="FM"></a>
+        <a></a>
+        <a href="wallpaper.html"><img src="/assets/shield.svg" alt="WallPaper"></a>
+        <a><img src="/assets/set.svg" alt="Settings"></a>
     </div>
     <style>
         #feature-bar {
@@ -55,14 +72,14 @@
             display: flex;
             justify-content: space-evenly;
         }
-        #feature-bar button {
+        #feature-bar a {
             width: 60px;
             background-color: rgba(99, 6, 99, 0.671);
             border: none;
             color: white;
             padding: 5px;
         }
-        #feature-bar button img {
+        #feature-bar a img {
             width: 90%;
             height: 90%;
         }
